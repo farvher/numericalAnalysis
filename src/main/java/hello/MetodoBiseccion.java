@@ -13,10 +13,9 @@ public class MetodoBiseccion {
 
 		Double xa = 0D;
 		Double xu = 1D;
-		
 		Double xrOld = 0D;
-		
 		Double ep = 100D;
+		
 		for (int i = 0; i < 100; i++) {
 			System.out.println("------------------------------");
 			System.out.println("Iteracion " +(i+1));
