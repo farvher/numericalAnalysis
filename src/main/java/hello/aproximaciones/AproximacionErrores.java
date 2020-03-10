@@ -1,4 +1,4 @@
-package hello;
+package hello.aproximaciones;
 
 import java.util.Arrays;
 import java.util.List;

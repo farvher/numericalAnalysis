@@ -1,4 +1,4 @@
-package hello;
+package hello.interpolacion;
 
 public class InterpolacionLineal {
 

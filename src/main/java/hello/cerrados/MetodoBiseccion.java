@@ -1,4 +1,6 @@
-package hello;
+package hello.cerrados;
+
+import hello.aproximaciones.AproximacionErrores;
 
 import java.util.function.DoubleFunction;
 
