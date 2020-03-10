@@ -34,6 +34,10 @@ public class MetodoBiseccion {
 			} else {
 				xu = xr;
 			}
+			if(fxr == 0D){
+				System.out.println("Final " + xr );
+				break;
+			}
 			System.out.println("------------------------------");
 		}
 
