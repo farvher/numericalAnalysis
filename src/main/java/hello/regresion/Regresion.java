@@ -4,18 +4,27 @@ public class Regresion {
     private double[] x;
     private double[] y;
     private int n;          //número de datos
-    public double a, b;    //pendiente y ordenada en el origen
+    public double a, b, c;    //pendiente y ordenada en el origen
 
 
     public static void main(String[] args) {
         double[] temperatura={5, 7, 10, 12, 16, 20, 23, 27, 19, 14, 9, 6};
         double[] ventas={9, 11, 15, 16, 20, 24, 27, 29, 22, 20, 14, 9};
-        Regresion regresion=new Regresion(temperatura, ventas);
+
+        double[] xi = {1,2,3,4,5,6,7};
+        double[] xu = {0.5,2.5,2.0,4.0,3.5,6.0,5.5};
+
+        Regresion regresion=new Regresion(xi, xu);
         regresion.lineal();
         System.out.println("Pendiente             "+regresion.a);
         System.out.println("Ordenada en el origen "+regresion.b);
+        System.out.println("a1 " + regresion.a);
+        System.out.println("a2 " + regresion.c);
 
-        System.out.println("Indice de correlación "+regresion.correlacion());
+        System.out.printf("y = %sx + %s%n", regresion.a, regresion.c);
+
+
+        //System.out.println("Indice de correlación "+regresion.correlacion());
     }
 
     public Regresion(double[] x, double[] y) {
@@ -36,6 +45,7 @@ public class Regresion {
         }
         a = (n * pxy - sx * sy) / (n * sx2 - sx * sx);
         b = (sy - b * sx) / n;
+        c = b - (a * (sx/n));
     }
 
     public double correlacion() {
