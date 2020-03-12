@@ -7,6 +7,6 @@ package hello.abiertos;
  * @author farith sanmiguel
  *
  * */
-public class MetodoPuntoFijo {
+public class IteracionSimplePuntoFijo {
 
 }
