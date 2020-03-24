@@ -8,16 +8,17 @@ public class MetodoBiseccion {
 
 	// f(x) = x4 + 3x3 - 2
 	static DoubleFunction<Double> fun = x -> Math.pow(x, 4) + (3 * (Math.pow(x, 3))) - 2;
+	static DoubleFunction<Double> sm = x -> -2 +(7*x) - (5*Math.pow(x,2)) + (6*Math.pow(x,3));
 
 	public static void main(String[] args) {
 
 		System.out.println("Metodo de la biseccion f(x) = x4 + 3x3 - 2");
 
-		Double xa = 0D;
-		Double xu = 1D;
+		Double xa = 0d;
+		Double xu = 1d;
 		Double xrOld = 0D;
 		Double ep = 100D;
-		
+		fun =sm;
 		for (int i = 0; i < 100; i++) {
 			System.out.println("------------------------------");
 			System.out.println("Iteracion " +(i+1));

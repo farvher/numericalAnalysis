@@ -11,6 +11,9 @@ public class Regresion {
         double[] temperatura={5, 7, 10, 12, 16, 20, 23, 27, 19, 14, 9, 6};
         double[] ventas={9, 11, 15, 16, 20, 24, 27, 29, 22, 20, 14, 9};
 
+        double[] x = {1,3,5,7,10,12,13,16,18,20};
+        double[] y ={4,5,6,5,8,7,6,9,12,11};
+
         double[] xi = {1,2,3,4,5,6,7};
         double[] xu = {0.5,2.5,2.0,4.0,3.5,6.0,5.5};
 
@@ -24,7 +27,7 @@ public class Regresion {
         System.out.printf("y = %sx + %s%n", regresion.a, regresion.c);
 
 
-        //System.out.println("Indice de correlación "+regresion.correlacion());
+        System.out.println("Indice de correlación "+regresion.correlacion());
     }
 
     public Regresion(double[] x, double[] y) {

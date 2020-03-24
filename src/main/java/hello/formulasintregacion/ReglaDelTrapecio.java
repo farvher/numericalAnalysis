@@ -8,13 +8,15 @@ public class ReglaDelTrapecio {
 
     static DoubleFunction<Double> fn = x -> 0.2 + 25 * x - 200 * (Math.pow(x, 2)) + 675 * Math.pow(x, 3) - 900 * Math.pow(x, 4) + 400 * Math.pow(x, 5);
     static DoubleFunction<Double> fn2 = x -> -400 + 4050*x -10800*Math.pow(x,2) + 8000*Math.pow(x,3);
+    static DoubleFunction<Double> sm = x -> 1- Math.exp(-x);
     public static void main(String[] args) {
 
         System.out.println("REGLA DEL TRAPECIO f(x) = 0.2 +25x - 200x2 + 675x3 - 900x4 +400x5");
         System.out.println("valor real de la integral = 1.640533");
         Double b, a;
-        b = 0.8d;
+        b = 3d;
         a = 0d;
+        fn =sm;
         System.out.println(fn.apply(a));
         System.out.println(fn.apply(b));
 
