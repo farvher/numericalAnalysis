@@ -15,14 +15,14 @@ import java.util.function.DoubleFunction;
  */
 public class Punto4 {
 
-    //
+    //f(x) = -01664x^4 + 0.2858x^3 + 0.1640x^2 + 0.2373x - 0.1944
     static DoubleFunction<Double> fn = x ->
             (-0.1664 * Math.pow(x, 4))
                     + (0.2858 * Math.pow(x, 3))
                     + (0.1640 * Math.pow(x, 2))
                     + (0.2373 * x)
                     - 0.1944;
-    //
+    //f'(x) = -0.6656x^3 + 0.8574x^2 + 0.328x + 0.2373
     static DoubleFunction<Double> fn1 = x ->
             (-0.6656 * Math.pow(x, 3))
                     + (0.8574 * Math.pow(x, 2))
