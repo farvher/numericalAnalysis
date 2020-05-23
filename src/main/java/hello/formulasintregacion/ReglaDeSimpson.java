@@ -31,7 +31,7 @@ public class ReglaDeSimpson {
         }
 
 
-        Double I = (b-a) *((fn.apply(a) +(4*sumi) + (2*sump) + fn.apply(a))/(n*3));
+        Double I = (b-a) *((fn.apply(a) +(4*sumi) + (2*sump) + fn.apply(b))/(n*3));
         System.out.println("resultado simpson n="+n+" I = "+I);
     }
 

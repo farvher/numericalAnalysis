@@ -14,15 +14,15 @@ public class ReglaDelTrapecio {
         System.out.println("REGLA DEL TRAPECIO f(x) = 0.2 +25x - 200x2 + 675x3 - 900x4 +400x5");
         System.out.println("valor real de la integral = 1.640533");
         Double b, a;
-        b = 3d;
+        b = 0.8d;
         a = 0d;
-        fn =sm;
+
         System.out.println(fn.apply(a));
         System.out.println(fn.apply(b));
 
         Double res = (b - a) * ((fn.apply(a) + fn.apply(b)) / 2);
-        System.out.println("un solo segmento " + res);
-        Integer n = 4;
+        System.out.println("integral evaluando en un solo segmento " + res);
+        Integer n = 2;
         Double h = (b - a) / n;
         Double psx = 0d;
         Double x = a;
@@ -31,7 +31,7 @@ public class ReglaDelTrapecio {
         }
 
         Double I = (b - a) * ((fn.apply(a) + (2*psx) + fn.apply(b)) / (2 * n));
-        System.out.println("segmentos n = " + n +" es " + I);
+        System.out.println("Integral evaluada con segmentos n = " + n +" es " + I);
 
 
     }
